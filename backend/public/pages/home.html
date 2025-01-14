@@ -8,7 +8,7 @@
 	<body>
 		<h1>Welcome To Our Website!</h1>
 		<script>
-			fetch("http://localhost:8181/cards")
+			fetch("http://localhost:8182/cards")
 				.then((res) => res.json())
 				.then((cards) => console.log(cards))
 				.catch((err) => console.log(err));

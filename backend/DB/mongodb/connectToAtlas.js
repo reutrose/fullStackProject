@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const mongoose = require("mongoose");
-const connectionStringForAtlas = "";
+require("dotenv").config();
+const connectionStringForAtlas = process.env.ATLAS_CONNECTION_STRING;
 
 const connectToAtlasDb = async () => {
 	try {
