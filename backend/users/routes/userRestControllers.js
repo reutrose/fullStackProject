@@ -58,7 +58,7 @@ router.post("/login", async (req, res) => {
 			return handleError(res, 400, "Validation Error: " + validationError);
 		}
 		let { email, password } = req.body;
-		let token = await login(email, password);
+		let token = await login(email, password, false);
 		res.send(token);
 	} catch (error) {
 		handleError(res, 400, error.message);

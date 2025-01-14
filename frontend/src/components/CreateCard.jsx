@@ -77,13 +77,11 @@ function CreateCard() {
 					.min(2, "Street must contain at least 2 characters.")
 					.max(256)
 					.required("Street is a required field."),
-				houseNumber: Yup.string()
+				houseNumber: Yup.number()
 					.min(1, "House number must contain at least 1 digit.")
-					.max(256)
 					.required("House number is a required field."),
-				zip: Yup.string()
+				zip: Yup.number()
 					.min(2, "Zip must contain at least 2 digits.")
-					.max(256)
 					.required("Zip is a required field."),
 			}),
 		}),

@@ -6,8 +6,8 @@ const { handleError } = require("./utils/handleErrors");
 const chalk = require("chalk");
 const { loggerMiddleware } = require("./logger/loggerService");
 const app = express();
-const PORT = 8182;
 require("dotenv").config();
+const PORT = process.env.PORT || 8182;
 
 app.use(corsMiddleware);
 

@@ -44,8 +44,10 @@ export const userRegister = async (userData) => {
 			email: userData.email,
 			password: userData.password,
 			image: {
-				url: userData.image.url,
-				alt: userData.image.alt,
+				url:
+					userData.image.url ||
+					"https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg",
+				alt: userData.image.alt || "User Avatar",
 			},
 			address: {
 				state: userData.address.state,
